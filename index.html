@@ -1,68 +1,174 @@
 <!DOCTYPE html>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{background:linear-gradient(135deg,#0f172a,#1e293b);color:white;min-height:100vh}
-.container{max-width:1200px;margin:auto;padding:30px}
-.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px}
-.logo{font-size:26px;font-weight:700;letter-spacing:1px}
-.menu a{margin-left:25px;text-decoration:none;color:#cbd5e1;font-weight:500}
-.menu a:hover{color:white}
-.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
-.title{font-size:48px;font-weight:700;margin-bottom:20px}
-.subtitle{color:#94a3b8;font-size:18px;margin-bottom:30px}
-.btn{background:#22c55e;padding:15px 28px;border:none;border-radius:12px;color:white;font-size:16px;cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,.3)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:60px}
-.card{background:rgba(255,255,255,0.05);padding:25px;border-radius:18px;backdrop-filter:blur(8px);box-shadow:0 10px 25px rgba(0,0,0,.25)}
-.card h3{margin-bottom:12px}
-.balance{background:linear-gradient(135deg,#22c55e,#16a34a);padding:35px;border-radius:20px;color:white;box-shadow:0 15px 40px rgba(0,0,0,.4)}
-.balance h2{font-size:18px;font-weight:400;margin-bottom:10px}
-.balance .amount{font-size:40px;font-weight:700}
-.footer{text-align:center;margin-top:60px;color:#64748b}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif
+    }
+
+    body {
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        color: white;
+        min-height: 100vh
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 30px
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px
+    }
+
+    .logo {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 1px
+    }
+
+    .imgLogo {
+        border-radius: 20px;
+        width: 500px
+    }
+
+    .menu a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: #cbd5e1;
+        font-weight: 500
+    }
+
+    .menu a:hover {
+        color: white
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 40px;
+        align-items: center
+    }
+
+    .title {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 20px
+    }
+
+    .subtitle {
+        color: #94a3b8;
+        font-size: 18px;
+        margin-bottom: 30px
+    }
+
+    .btn {
+        background: #22c55e;
+        padding: 15px 28px;
+        border: none;
+        border-radius: 12px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .3)
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-top: 60px
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 25px;
+        border-radius: 18px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .25)
+    }
+
+    .card h3 {
+        margin-bottom: 12px
+    }
+
+    .balance {
+        background: linear-gradient(135deg, #22c55e, #16a34a);
+        padding: 35px;
+        border-radius: 20px;
+        color: white;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, .4)
+    }
+
+    .balance h2 {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 10px
+    }
+
+    .balance .amount {
+        font-size: 40px;
+        font-weight: 700
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 60px;
+        color: #64748b
+    }
 </style>
 </head>
+
 <body>
-<div class="container">
+    <div class="container">
 
-<div class="nav">
-<div class="logo">NeoBank</div>
-<div class="menu">
-<a href="#">Dashboard</a>
-<a href="#">Payments</a>
-<a href="#">Cards</a>
-<a href="#">Settings</a>
-</div>
-</div>
+        <div class="nav">
+            <div class="logo"><img class="imgLogo" src="/ND/0_BANKAS/src/img/Logo.jpg" alt="cha-ching bank logo"></div>
+            <div class="menu">
+                <a href="#">Dashboard</a>
+                <a href="#">Payments</a>
+                <a href="#">Cards</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
 
-<div class="hero">
-<div>
-<div class="title">Modern Banking Experience</div>
-<div class="subtitle">Manage your money, track spending, and transfer funds instantly with a sleek digital banking interface.</div>
-<button class="btn">Open Account</button>
-</div>
+        <div class="hero">
+            <div>
+                <div class="title">Modern Banking Experience</div>
+                <div class="subtitle">Manage your money, track spending, and transfer funds instantly with a sleek
+                    digital banking interface.</div>
+                <button class="btn">Open Account</button>
+            </div>
 
-<div class="balance">
-<h2>Total Balance</h2>
-<div class="amount">€12,840.50</div>
-</div>
-</div>
+            <div class="balance">
+                <h2>Total Balance</h2>
+                <div class="amount">€12,840.50</div>
+            </div>
+        </div>
 
-<div class="cards">
-<div class="card">
-<h3>💳 Cards</h3>
-<p>Manage your debit and credit cards securely.</p>
-</div>
-<div class="card">
-<h3>📊 Analytics</h3>
-<p>Track spending with real‑time financial insights.</p>
-</div>
-<div class="card">
-<h3>⚡ Transfers</h3>
-<p>Send money worldwide instantly and safely.</p>
-</div>
-</div>
+        <div class="cards">
+            <div class="card">
+                <h3>💳 Cards</h3>
+                <p>Manage your debit and credit cards securely.</p>
+            </div>
+            <div class="card">
+                <h3>📊 Analytics</h3>
+                <p>Track spending with real‑time financial insights.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Transfers</h3>
+                <p>Send money worldwide instantly and safely.</p>
+            </div>
+        </div>
 
-<div class="footer">© 2026 NeoBank — Smart Digital Banking</div>
+        <div class="footer">© 2026 Cha-Ching Bank — Smart Digital Banking</div>
 
-</div>
+    </div>
 </body>
+
 </html>
