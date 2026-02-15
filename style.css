@@ -77,6 +77,11 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
+.btn:hover {
+  background: white;
+  color: #22c55e;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -119,4 +124,146 @@ body {
   text-align: center;
   margin-top: 60px;
   color: #64748b;
+}
+
+/* accounts */
+
+.container-accounts {
+  max-width: 1100px;
+  margin: auto;
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #111827;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+th {
+  background: #1f2937;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: #0b1220;
+}
+
+.list-actions {
+  display: flex;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.delete {
+  background: #ef4444;
+  color: white;
+  font-size: 16px;
+}
+
+.delete:hover {
+  background: #961313;
+}
+
+.links a {
+  display: inline-block;
+  width: 76px;
+  text-decoration: none;
+  background: #22c55e;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.links a.withdraw {
+  background: #3b82f6;
+}
+
+.links a.withdraw:hover {
+  background: #0f4aa8;
+}
+
+.links a.add:hover {
+  background: #06692a;
+}
+
+/* create */
+
+.container-create {
+  max-width: 600px;
+  margin: auto;
+  background: #111827;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.h1-create {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.label-create {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input-create {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1f2937;
+  color: white;
+  font-size: 16px;
+}
+
+input.balance {
+  background: #020617;
+  color: #22c55e;
+  font-weight: 700;
+}
+
+.btn-create {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #22c55e;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-create:hover {
+  background: #16a34a;
+}
+
+.notice {
+  margin-top: 15px;
+  text-align: center;
+  color: #94a3b8;
 }

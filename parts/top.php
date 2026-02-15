@@ -1,24 +1,29 @@
+<?php
+const URL = 'http://localhost/PHP/ND/0_BANKAS/';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoneyTree Bank app</title>
-    <link rel="stylesheet" href="http://localhost/PHP/ND/0_BANKAS/style.css">
+    <title>MoneyTree Bank - <?=  $title ?></title>
+    <link rel="stylesheet" href="<?= URL ?>style.css">
+    <script src="<?= URL ?>app.js" defer></script>
 </head>
 
 <body>
     <div class="container">
 
         <div class="nav">
-            <div class="logo">MoneyTree Bank
-            </div>
+            <div class="logo">MoneyTree Bank</div>
             <div class="menu">
-                <a href="#">Dashboard</a>
-                <a href="#">Accounts</a>
-                <a href="#">Open Account</a>
-                <a href="#">Add funds</a>
-                <a href="#">Withdraw </a>
-                <a href="#">Log in</a>
+                <a href="<?= URL ?>">Dashboard</a>
+                <a href="<?= URL ?>accounts">Accounts</a>
+                <a href="<?= URL ?>create">Create Account</a>
+                <a href="<?= URL ?>credit">Credit</a>
+                <a href="<?= URL ?>debit">Debit</a>
+                <a href="<?= URL ?>login">Log in</a>
             </div>
         </div>

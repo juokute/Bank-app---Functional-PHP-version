@@ -1,13 +1,14 @@
 <?php
+$title = 'Home';
 include __DIR__ . '/parts/top.php';
 ?>
 
         <div class="hero">
             <div>
-                <div class="title">Modern Banking Experience</div>
-                <div class="subtitle">Manage your money, track spending, and transfer funds instantly with a sleek
+                <div data-top-color class="title">Modern Banking Experience</div>
+                <div data-top-phrases class="subtitle">Manage your money, track spending, and transfer funds instantly with a sleek
                     digital banking interface.</div>
-                <button class="btn">Open Account</button>
+                <button data-top-color-button class="btn">Create Account</button>
             </div>
 
             <div class="balance">
