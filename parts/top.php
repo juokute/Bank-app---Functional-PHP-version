@@ -19,7 +19,7 @@ const URL = 'http://localhost/PHP/ND/0_BANKAS/';
         <div class="nav">
             <div class="logo">MoneyTree Bank</div>
             <div class="menu">
-                <a href="<?= URL ?>">Dashboard</a>
+                <a href="<?= URL ?>">Home</a>
                 <a href="<?= URL ?>accounts">Accounts</a>
                 <a href="<?= URL ?>create">Create Account</a>
                 <a href="<?= URL ?>credit">Credit</a>

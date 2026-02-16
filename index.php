@@ -5,15 +5,15 @@ include __DIR__ . '/parts/top.php';
 
         <div class="hero">
             <div>
-                <div data-top-color class="title">Modern Banking Experience</div>
-                <div data-top-phrases class="subtitle">Manage your money, track spending, and transfer funds instantly with a sleek
-                    digital banking interface.</div>
-                <button data-top-color-button class="btn">Create Account</button>
+                <div class="title">Modern Banking Experience</div>
+                <div data-top-color data-top-phrase class="subtitle"></div>
+                <button data-top-color-button class="btn">Open an account</button>
             </div>
 
             <div class="balance">
-                <h2>Total Balance</h2>
-                <div class="amount">€12,840.50</div>
+                
+                <div class="amount">Need a loan?</div>
+                <h2>Apply now – answer within 2 hours!</h2>
             </div>
         </div>
 

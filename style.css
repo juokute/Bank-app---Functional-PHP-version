@@ -64,6 +64,8 @@ body {
   color: #94a3b8;
   font-size: 18px;
   margin-bottom: 30px;
+  height: 21px;
+  padding: 10px 0 30px 0;
 }
 
 .btn {
@@ -266,4 +268,204 @@ input.balance {
   margin-top: 15px;
   text-align: center;
   color: #94a3b8;
+}
+
+/* credit */
+
+.container-credit {
+  max-width: 600px;
+  margin: auto;
+  background: #111827;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.h1-credit {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.info {
+  background: #020617;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.info p {
+  margin: 6px 0;
+}
+
+.label-credit {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input-credit {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1f2937;
+  color: white;
+}
+
+.btn-credit {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #22c55e;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-credit:hover {
+  background: #16a34a;
+}
+
+.success {
+  text-align: center;
+  margin-top: 15px;
+  color: #22c55e;
+}
+
+/* debit */
+
+.container-debit {
+  max-width: 600px;
+  margin: auto;
+  background: #111827;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.h1-debit {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.info-debit {
+  background: #020617;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.info-debit p {
+  margin: 6px 0;
+}
+
+.label-debit {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input-debit {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1f2937;
+  color: white;
+}
+
+.btn-debit {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-debit:hover {
+  background: #dc2626;
+}
+
+.success-debit {
+  text-align: center;
+  margin-top: 15px;
+  color: #22c55e;
+}
+
+/* login */
+
+.container-login {
+  max-width: 440px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 14px;
+}
+
+.card-login {
+  background: #111827;
+  padding: 40px;
+  border-radius: 16px;
+  width: 380px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.h1-login {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.label-login {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input-login {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1f2937;
+  color: white;
+}
+
+.btn-login {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #22c55e;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background: #16a34a;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 18px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.error {
+  text-align: center;
+  margin-top: 12px;
+  color: #ef4444;
 }

@@ -16,3 +16,10 @@ $phrases = [
 
 $randomIndex = array_rand($phrases);
 $randomPhrase = $phrases[$randomIndex];
+
+header('Content-Type: application/json'); // nurodo, kad grąžinamas turinys yra JSON formato
+echo json_encode(
+    [
+        'phrase' => $randomPhrase
+    ]
+); // grąžina frazę JSON formatu
