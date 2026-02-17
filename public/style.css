@@ -137,12 +137,29 @@ body {
 
 div.counting {
   display: flex;
+  justify-content: space-between;
 }
 
 h1 {
   margin-bottom: 25px;
 }
 
+.totalAccounts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.totalAccounts h3 {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.totalAccounts h2 {
+  font-size: 28px;
+  color: white;
+  font-weight: 700;
+}
 
 table {
   width: 100%;
