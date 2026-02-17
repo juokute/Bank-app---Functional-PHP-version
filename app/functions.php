@@ -72,6 +72,11 @@ function creditController($id = null)
         }
     }
 
+    if (!$clientData) {
+        header('Location: ' . URL . 'accounts');
+        return '';
+    }
+
     return view('credit', [
         'title' => 'Credit',
         'client' => $clientData
@@ -90,6 +95,12 @@ function debitController($id = null)
             break;
         }
     }
+
+    if (!$clientData) {
+        header('Location: ' . URL . 'accounts');
+        return '';
+    }
+
     return view('debit', [
         'title' => 'Debit',
         'client' => $clientData
