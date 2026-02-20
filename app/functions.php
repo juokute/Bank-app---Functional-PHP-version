@@ -215,7 +215,7 @@ function storeController()
     file_put_contents(DIR . 'data/clients.json', json_encode($clients, JSON_PRETTY_PRINT), LOCK_EX);
 
     $_SESSION['success'] = [
-        'message' => 'Account has been successfully created.',
+        'message' => "{$client['firstName']} {$client['lastName']} account has been successfully created.",
         'id' => $storeData['id'] // susiejame su naujai sukurta id
     ];
 
@@ -262,7 +262,7 @@ function addFundsController($id = null)
     unset($client);
 
     // if ($found) {
-        file_put_contents(DIR . 'data/clients.json', json_encode($clients, JSON_PRETTY_PRINT), LOCK_EX);
+    file_put_contents(DIR . 'data/clients.json', json_encode($clients, JSON_PRETTY_PRINT), LOCK_EX);
     // }
 
     header('Location: ' . URL . 'accounts');
@@ -327,6 +327,10 @@ function deleteAccountController($id = null)
 
         if ($client['id'] == $id) {
             if (floatval($client['balance']) > 0) {
+                $_SESSION['error'] = [
+                    'message' => "Cannot delete account: account has remaining balance ({$client['balance']} EUR).",
+                    'id' => $id
+                ];
                 header('Location: ' . URL . 'accounts');
                 return '';
             }
@@ -339,6 +343,12 @@ function deleteAccountController($id = null)
     $clients = array_values($clients);
 
     file_put_contents(DIR . 'data/clients.json', json_encode($clients, JSON_PRETTY_PRINT));
+
+
+    $_SESSION['success'] = [
+        'message' => "{$client['firstName']} {$client['lastName']} account successfully deleted.",
+        'id' => $id
+    ];
 
     header('Location: ' . URL . 'accounts');
     return '';

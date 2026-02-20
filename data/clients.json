@@ -12,7 +12,7 @@
         "lastName": "Fyfait\u0117",
         "accountNumber": "LT6073000108595149875",
         "personalId": "60105239874",
-        "balance": "17000.00",
+        "balance": "16000.00",
         "id": 659469073
     },
     {
@@ -20,7 +20,7 @@
         "lastName": "Naujokas",
         "accountNumber": "LT1640100125987465412369",
         "personalId": "50208109874",
-        "balance": "8000.00",
+        "balance": "9000.00",
         "id": 940395645
     },
     {
@@ -28,7 +28,7 @@
         "lastName": "Abromavi\u010dius",
         "accountNumber": "LT404010012595236548",
         "personalId": "38505126584",
-        "balance": "12000.00",
+        "balance": "14000.00",
         "id": 667897071
     },
     {
@@ -38,22 +38,6 @@
         "personalId": "36508171254",
         "balance": "14000.00",
         "id": 582949265
-    },
-    {
-        "firstName": "Nijol\u0117",
-        "lastName": "O\u017eelyt\u0117",
-        "accountNumber": "LT9040100125852632117412",
-        "personalId": "46210011234",
-        "balance": "6000.00",
-        "id": 370656502
-    },
-    {
-        "firstName": "Ana",
-        "lastName": "Karenina",
-        "accountNumber": "LT1670300100456963328549",
-        "personalId": "45204241236",
-        "balance": "2000.00",
-        "id": 314333646
     },
     {
         "firstName": "Saulen\u0117",
@@ -76,7 +60,7 @@
         "lastName": "Auk\u0161tait\u0117",
         "accountNumber": "LT1840100123123412341234",
         "personalId": "49603171234",
-        "balance": "45000.00",
+        "balance": "40000.00",
         "id": 276344600
     },
     {
@@ -96,14 +80,6 @@
         "id": 842058779
     },
     {
-        "firstName": "Nojus",
-        "lastName": "J\u016breivis",
-        "accountNumber": "LT164010123123432100123",
-        "personalId": "50301171234",
-        "balance": "12000.00",
-        "id": 328402970
-    },
-    {
         "firstName": "Jonas",
         "lastName": "Did\u017ebaldis",
         "accountNumber": "LT1773001234123412341234",
@@ -112,11 +88,11 @@
         "id": 869821617
     },
     {
-        "firstName": "Danguol\u0117",
-        "lastName": "Liepien\u0117",
-        "accountNumber": "LT1673000123012301230123",
-        "personalId": "48505250124",
-        "balance": "10000.00",
-        "id": 837931461
+        "firstName": "Pranas",
+        "lastName": "Nuodarba",
+        "accountNumber": "LT3573000100012301230123",
+        "personalId": "36802140122",
+        "balance": "0.00",
+        "id": "69986c1e2f3ef"
     }
 ]
