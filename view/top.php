@@ -1,19 +1,18 @@
-<?php
-// const URL = 'http://localhost/PHP/ND/0_BANKAS/';
-?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoneyTree Bank - <?=  $title ?></title>
+    <title>MoneyTree Bank - <?= $title ?></title>
     <link rel="stylesheet" href="<?= URL ?>style.css">
     <script src="<?= URL ?>app.js" defer></script>
 </head>
 
 <body>
+
     <div class="container">
 
         <div class="nav">

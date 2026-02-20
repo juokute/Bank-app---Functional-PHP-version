@@ -11,6 +11,32 @@ body {
   min-height: 100vh;
 }
 
+.flash {
+    display: none; /* default ne rodomas */
+}
+
+.flash.success, .flash.error {
+    display: block; /* parodymui */
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: opacity 1s ease;
+}
+
+.flash.success {
+    background-color: #4CAF50;
+}
+
+.flash.error {
+    background-color: #ef4444;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -418,7 +444,7 @@ input.balance {
   background: #dc2626;
 }
 
-.success-debit {
+.success-debit-credit {
   text-align: center;
   margin-top: 15px;
   color: #22c55e;
@@ -491,3 +517,5 @@ input.balance {
   margin-top: 12px;
   color: #ef4444;
 }
+
+
