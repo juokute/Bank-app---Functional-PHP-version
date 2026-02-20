@@ -112,19 +112,19 @@
         "id": "6998707ecbcf2"
     },
     {
-        "firstName": "Ida",
-        "lastName": "Gov",
-        "accountNumber": "LT3240100123012301230123",
-        "personalId": "48510240129",
-        "balance": "0.00",
-        "id": "699874f50088b"
-    },
-    {
         "firstName": "Robertas",
         "lastName": "Buzas",
         "accountNumber": "LT517777724474287802",
         "personalId": "39201140127",
         "balance": "0.00",
         "id": "699885865d612"
+    },
+    {
+        "firstName": "Ana",
+        "lastName": "Fast",
+        "accountNumber": "LT667777764090572990",
+        "personalId": "60511030123",
+        "balance": "9000.00",
+        "id": "699889591db21"
     }
 ]

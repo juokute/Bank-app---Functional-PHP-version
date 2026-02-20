@@ -296,6 +296,16 @@ input.balance {
   font-weight: 700;
 }
 
+/* specialus stilius readonly laukams create.php */
+.input-create[readonly].balance {
+  background: #374151;       /* tamsesnis fonas nei įvedami laukai */
+  color: #9ca3af;            /* pilkas tekstas, rodo, kad neaktyvus */
+  font-weight: 600;          /* kiek paryškintas tekstas */
+  cursor: not-allowed;       /* rodo, kad negalima keisti */
+  opacity: 0.8;              /* švelnus užpildymas */
+  border: 1px solid #4b5563; /* subtilus kontūras, kad atskirtų lauką */
+}
+
 .btn-create {
   width: 100%;
   margin-top: 25px;
