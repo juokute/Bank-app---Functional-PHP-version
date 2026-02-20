@@ -32,14 +32,6 @@
         "id": 667897071
     },
     {
-        "firstName": "Veronika",
-        "lastName": "Laukaitien\u0117",
-        "accountNumber": "LT4040100125745262127452",
-        "personalId": "36508171254",
-        "balance": "14000.00",
-        "id": 582949265
-    },
-    {
         "firstName": "Saulen\u0117",
         "lastName": "Spindulyt\u0117",
         "accountNumber": "LT1640100100123412341234",
@@ -94,5 +86,37 @@
         "personalId": "36802140122",
         "balance": "0.00",
         "id": "69986c1e2f3ef"
+    },
+    {
+        "firstName": "Romas",
+        "lastName": "\u0160ernas",
+        "accountNumber": "LT1440100123012301230123",
+        "personalId": "37511050126",
+        "balance": "1000.00",
+        "id": "69986d9d07d3e"
+    },
+    {
+        "firstName": "Jurgis",
+        "lastName": "Marazma",
+        "accountNumber": "LT367030012301230123",
+        "personalId": "36203310187",
+        "balance": "0.00",
+        "id": "69986e2e8cbb3"
+    },
+    {
+        "firstName": "Zenonas",
+        "lastName": "Palaima",
+        "accountNumber": "LT604010012301230123",
+        "personalId": "37412310129",
+        "balance": "0.00",
+        "id": "69986f26d988d"
+    },
+    {
+        "firstName": "Leonas",
+        "lastName": "Kukutis",
+        "accountNumber": "LT3270440123012301230123",
+        "personalId": "37208130129",
+        "balance": "0.00",
+        "id": "6998707ecbcf2"
     }
 ]

@@ -215,7 +215,7 @@ function storeController()
     file_put_contents(DIR . 'data/clients.json', json_encode($clients, JSON_PRETTY_PRINT), LOCK_EX);
 
     $_SESSION['success'] = [
-        'message' => "{$client['firstName']} {$client['lastName']} account has been successfully created.",
+        'message' => "{$storeData['firstName']} {$storeData['lastName']} account has been successfully created.",
         'id' => $storeData['id'] // susiejame su naujai sukurta id
     ];
 
