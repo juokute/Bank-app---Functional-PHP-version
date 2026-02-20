@@ -118,5 +118,13 @@
         "personalId": "48510240129",
         "balance": "0.00",
         "id": "699874f50088b"
+    },
+    {
+        "firstName": "Robertas",
+        "lastName": "Buzas",
+        "accountNumber": "LT517777724474287802",
+        "personalId": "39201140127",
+        "balance": "0.00",
+        "id": "699885865d612"
     }
 ]

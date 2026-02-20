@@ -191,6 +191,20 @@ function storeController()
     }
 
     // 🔴 3. Kontrolinio skaičiaus patikrinimas
+
+    /* 
+    https://lt.wikipedia.org/wiki/Asmens_kodas
+
+    Jei asmens kodas užrašomas ABCDEFGHIJK, 
+    tai: S = A*1 + B*2 + C*3 + D*4 + E*5 + F*6 + G*7 + H*8 + I*9 + J*1
+    Suma S dalinama iš 11, ir jei liekana nelygi 10, ji yra asmens kodo kontrolinis skaičius K. 
+
+    Jei liekana lygi 10, tuomet skaičiuojama nauja suma su tokiais svertiniais koeficientais:
+    S = A*3 + B*4 + C*5 + D*6 + E*7 + F*8 + G*9 + H*1 + I*2 + J*3
+    Ši suma S vėl dalinama iš 11, ir jei liekana nelygi 10, ji yra asmens kodo kontrolinis skaičius K. 
+    Jei vėl liekana yra 10, kontrolinis skaičius K yra 0. 
+    */
+
     $digits = str_split($personalId); // A,B,C,...,K
     $sum = 0;
     for ($i = 0; $i < 10; $i++) {
@@ -219,7 +233,7 @@ function storeController()
         return '';
     }
 
-    // 🔴 4. Vardo ir pavrdės simbolių patikrinimas
+    // 🔴 4. Vardo ir pavardės simbolių patikrinimas
     if (!preg_match('/^[a-zA-ZąčęėįšųūžĄČĘĖĮŠŲŪŽ]{3,}$/u', $firstName)) {
         $_SESSION['error'] = [
             'message' => 'First name must contain only letters and be at least 3 characters.',
@@ -246,7 +260,8 @@ function storeController()
 
     $storeData['firstName'] = $firstName;
     $storeData['lastName'] = $lastName;
-    $storeData['accountNumber'] = $_POST['accountNumber'] ?? '';
+    $storeData['accountNumber'] = $_SESSION['newIban'];
+    unset($_SESSION['newIban']);
     $storeData['personalId'] = $_POST['personalId'] ?? '';
     $storeData['balance'] = $_POST['balance'] ?? '';
     $storeData['id'] = uniqid();
@@ -396,6 +411,51 @@ function deleteAccountController($id = null)
 
     header('Location: ' . URL . 'accounts');
     return '';
+}
+
+
+function mod97($number)
+{
+    /*
+    🔴 IBAN https://en.wikipedia.org/wiki/International_Bank_Account_Number 
+    Lietuvoje IBAN ilgis = 20 simbolių
+    LT IBAN struktūra: LTkk BBBB BAAA AAAA AAAA
+    LT - 21 29 
+    k — kontroliniai skaičiai pradžioje 00
+    B — banko kodas (pas tave 77777)
+    A — sąskaitos numeris random
+    
+    validacijos tikrinimas BBBB BAAA AAAA AAAA 2129 kk / 97 turi likti liekana 1.
+
+    */
+
+    $checksum = 0;
+
+    for ($i = 0; $i < strlen($number); $i++) {
+        $checksum = ($checksum * 10 + intval($number[$i])) % 97;
+    }
+
+    return $checksum;
+}
+
+
+// Stabilus IBAN per vieną formos sesiją
+function getNewIban()
+{
+    if (!isset($_SESSION['newIban'])) {
+        $countryCode = 'LT';
+        $bankCode = '77777'; // banko kodas
+        $accountNumber = str_pad(rand(0, 99999999999), 11, '0', STR_PAD_LEFT);
+
+        // LT = 2129
+        $numeric = $bankCode . $accountNumber . '212900';
+        $mod = mod97($numeric);
+        $checkDigits = str_pad(98 - $mod, 2, '0', STR_PAD_LEFT);
+
+        $_SESSION['newIban'] = $countryCode . $checkDigits . $bankCode . $accountNumber;
+    }
+
+    return $_SESSION['newIban'];
 }
 
 

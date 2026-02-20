@@ -17,7 +17,7 @@
             <input class="input-create" type="text" name="lastName" value="<?= $old['lastName'] ?? '' ?>" required />
 
             <label class="label-create">Account Number</label>
-            <input class="input-create" type="text" name="accountNumber" value="<?= $old['accountNumber'] ?? '' ?>" required placeholder="LTxx xxxx xxxx xxxx xxxx" />
+            <input class="input-create" type="text" name="accountNumber" value="<?= getNewIban() ?>" readonly />
 
             <label class="label-create">Personal ID</label>
             <input class="input-create" type="text" name="personalId" value="<?= $old['personalId'] ?? '' ?>" required />
