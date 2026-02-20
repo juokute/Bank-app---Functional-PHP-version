@@ -139,6 +139,30 @@ function storeController()
 {
     $_SESSION['old'] = $_POST;
 
+    $firstName = trim($_POST['firstName'] ?? '');
+    $lastName = trim($_POST['lastName'] ?? '');
+
+    // validacija vardui
+    if (strlen($firstName) < 3) {
+        $_SESSION['error'] = [
+            'message' => 'First name must be at least 3 characters long.',
+            'id' => null
+        ];
+        header('Location: ' . URL . 'create');
+        return '';
+    }
+
+    // validacija pavardei
+    if (strlen($lastName) < 3) {
+        $_SESSION['error'] = [
+            'message' => 'Last name must be at least 3 characters long.',
+            'id' => null
+        ];
+        header('Location: ' . URL . 'create');
+        return '';
+    }
+
+
     $personalId = $_POST['personalId'] ?? '';
 
     // 🔴 1. validacija: tik skaičiai ir tiksliai 11 simbolių
@@ -195,14 +219,33 @@ function storeController()
         return '';
     }
 
+    // 🔴 4. Vardo ir pavrdės simbolių patikrinimas
+    if (!preg_match('/^[a-zA-ZąčęėįšųūžĄČĘĖĮŠŲŪŽ]{3,}$/u', $firstName)) {
+        $_SESSION['error'] = [
+            'message' => 'First name must contain only letters and be at least 3 characters.',
+            'id' => null
+        ];
+        header('Location: ' . URL . 'create');
+        return '';
+    }
+
+    if (!preg_match('/^[a-zA-ZąčęėįšųūžĄČĘĖĮŠŲŪŽ]{3,}$/u', $lastName)) {
+        $_SESSION['error'] = [
+            'message' => 'Last name must contain only letters and be at least 3 characters.',
+            'id' => null
+        ];
+        header('Location: ' . URL . 'create');
+        return '';
+    }
+
+
 
     // jei viskas ok — išvalom old
     unset($_SESSION['old']);
 
 
-
-    $storeData['firstName'] = $_POST['firstName'] ?? '';
-    $storeData['lastName'] = $_POST['lastName'] ?? '';
+    $storeData['firstName'] = $firstName;
+    $storeData['lastName'] = $lastName;
     $storeData['accountNumber'] = $_POST['accountNumber'] ?? '';
     $storeData['personalId'] = $_POST['personalId'] ?? '';
     $storeData['balance'] = $_POST['balance'] ?? '';
@@ -334,6 +377,7 @@ function deleteAccountController($id = null)
                 header('Location: ' . URL . 'accounts');
                 return '';
             }
+            $deletedClient = $client;
             unset($clients[$index]);
             break;
         }
@@ -346,7 +390,7 @@ function deleteAccountController($id = null)
 
 
     $_SESSION['success'] = [
-        'message' => "{$client['firstName']} {$client['lastName']} account successfully deleted.",
+        'message' => "{$deletedClient['firstName']} {$deletedClient['lastName']} account successfully deleted.",
         'id' => $id
     ];
 

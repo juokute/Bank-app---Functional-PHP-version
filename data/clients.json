@@ -20,7 +20,7 @@
         "lastName": "Naujokas",
         "accountNumber": "LT1640100125987465412369",
         "personalId": "50208109874",
-        "balance": "9000.00",
+        "balance": "8100.00",
         "id": 940395645
     },
     {
@@ -28,7 +28,7 @@
         "lastName": "Abromavi\u010dius",
         "accountNumber": "LT404010012595236548",
         "personalId": "38505126584",
-        "balance": "14000.00",
+        "balance": "16000.00",
         "id": 667897071
     },
     {
@@ -46,14 +46,6 @@
         "personalId": "50609091234",
         "balance": "4500.00",
         "id": 604189765
-    },
-    {
-        "firstName": "Ilona",
-        "lastName": "Auk\u0161tait\u0117",
-        "accountNumber": "LT1840100123123412341234",
-        "personalId": "49603171234",
-        "balance": "40000.00",
-        "id": 276344600
     },
     {
         "firstName": "Aloyzas",
@@ -118,5 +110,13 @@
         "personalId": "37208130129",
         "balance": "0.00",
         "id": "6998707ecbcf2"
+    },
+    {
+        "firstName": "Ida",
+        "lastName": "Gov",
+        "accountNumber": "LT3240100123012301230123",
+        "personalId": "48510240129",
+        "balance": "0.00",
+        "id": "699874f50088b"
     }
 ]
