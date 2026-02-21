@@ -604,6 +604,7 @@ input.balance {
   border: none;
   background: #1f2937;
   color: white;
+  font-size: 16px;
 }
 
 .btn-login {

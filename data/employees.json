@@ -1,6 +1,6 @@
 [
   {
-    "id": "admin",
-    "password": "$2y$10$9O8Y7kJQv8rK3d3xWfK6HuC5iKJd3L7lHk0z3x9g1QzT3p0H7F4yG"
+    "id": "moneytree-admin-2026-1",
+    "password": "$argon2id$v=19$m=65536,t=4,p=1$ejJPMDJzeGxjQnpnZ0wwWA$MFA9FGVE581gbje8GFfdQx3KXxoKc8q8yNnBCn+pyYc"
   }
 ]

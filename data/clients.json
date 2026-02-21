@@ -1,35 +1,11 @@
 [
     {
-        "firstName": "Ignas",
-        "lastName": "\u0160irmulis",
-        "accountNumber": "LT40 7300 0100 8524 1296",
-        "personalId": "39807309852",
-        "balance": "7000.00",
-        "id": 573511762
-    },
-    {
         "firstName": "Laura",
         "lastName": "Fyfait\u0117",
         "accountNumber": "LT6073000108595149875",
         "personalId": "60105239874",
         "balance": "16000.00",
         "id": 659469073
-    },
-    {
-        "firstName": "Andrius",
-        "lastName": "Naujokas",
-        "accountNumber": "LT1640100125987465412369",
-        "personalId": "50208109874",
-        "balance": "8100.00",
-        "id": 940395645
-    },
-    {
-        "firstName": "Nerijus",
-        "lastName": "Abromavi\u010dius",
-        "accountNumber": "LT404010012595236548",
-        "personalId": "38505126584",
-        "balance": "16000.00",
-        "id": 667897071
     },
     {
         "firstName": "Saulen\u0117",
@@ -92,7 +68,7 @@
         "lastName": "Marazma",
         "accountNumber": "LT367030012301230123",
         "personalId": "36203310187",
-        "balance": "0.00",
+        "balance": "1000.00",
         "id": "69986e2e8cbb3"
     },
     {
@@ -126,5 +102,29 @@
         "personalId": "60511030123",
         "balance": "9000.00",
         "id": "699889591db21"
+    },
+    {
+        "firstName": "Ign\u0117",
+        "lastName": "Pauk\u0161tyt\u0117",
+        "accountNumber": "LT857777783440385915",
+        "personalId": "49802150125",
+        "balance": "0.00",
+        "id": "69997195405c1"
+    },
+    {
+        "firstName": "J\u016brat\u0117",
+        "lastName": "Stirnait\u0117",
+        "accountNumber": "LT807777732206950158",
+        "personalId": "60210140122",
+        "balance": "3000.00",
+        "id": "6999824f3479a"
+    },
+    {
+        "firstName": "Au\u0161ra",
+        "lastName": "Led\u0117",
+        "accountNumber": "LT967777777881453651",
+        "personalId": "60909030127",
+        "balance": "10000.00",
+        "id": "699983ef4dbde"
     }
 ]

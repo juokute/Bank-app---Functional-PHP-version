@@ -13,16 +13,20 @@ function router()
         return homeController();
     }
     if ('GET' == $method && $uri[0] == 'accounts') {
+        requireAuth();
         return accountsController();
     }
     if ('GET' == $method && $uri[0] == 'create') {
+        requireAuth();
         return createController();
     }
     if ('GET' == $method && $uri[0] == 'credit') {
+        requireAuth();
         $id = $uri[1] ?? null;
         return creditController($id);
     }
     if ('GET' == $method && $uri[0] == 'debit') {
+        requireAuth();
         $id = $uri[1] ?? null;
         return debitController($id);
     }
@@ -31,22 +35,34 @@ function router()
     }
 
     if ('POST' == $method && $uri[0] == 'store') {
+        requireAuth();
         return storeController();
     }
 
     if ('POST' == $method && $uri[0] == 'add-funds') {
+        requireAuth();
         $id = $uri[1] ?? null;
         return addFundsController($id);
     }
 
     if ('POST' == $method && $uri[0] == 'withdraw-funds') {
+        requireAuth();
         $id = $uri[1] ?? null;
         return withdrawFundsController($id);
     }
 
     if ('POST' == $method && $uri[0] == 'delete-account') {
+        requireAuth();
         $id = $uri[1] ?? null;
         return deleteAccountController($id);
+    }
+
+    if ('POST' == $method && $uri[0] == 'login') {
+        return loginPostController();
+    }
+
+    if ('GET' == $method && $uri[0] == 'logout') {
+        return logoutController();
     }
 }
 
@@ -456,6 +472,48 @@ function getNewIban()
     }
 
     return $_SESSION['newIban'];
+}
+
+function auth()
+{
+    return isset($_SESSION['employee']);
+}
+
+function requireAuth()
+{
+    if (!auth()) {
+        header('Location: ' . URL . 'login');
+        exit;
+    }
+}
+
+function loginPostController()
+{
+    $id = $_POST['id'] ?? '';
+    $pass = $_POST['pass'] ?? '';
+
+    $employees = json_decode(file_get_contents(DIR . 'data/employees.json'), true) ?? [];
+
+    foreach ($employees as $emp) {
+        if ($emp['id'] === $id && password_verify($pass, $emp['password'])) {
+            $_SESSION['employee'] = $id;
+            header('Location: ' . URL . 'accounts');
+            return '';
+        }
+    }
+
+    $_SESSION['error'] = ['message' => 'Invalid login'];
+    header('Location: ' . URL . 'login');
+    return '';
+}
+
+function logoutController()
+{
+    session_unset();
+    session_destroy();
+
+    header('Location: ' . URL);
+    exit;
 }
 
 
