@@ -118,6 +118,25 @@ body {
   margin-top: 60px;
 }
 
+/* Responsive: ekranas siauresnis nei 768px */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr; /* vienas stulpelis */
+    grid-template-rows: auto auto; /* tekstas viršuje, balansas apačioje */
+    gap: 20px; /* sumažintas tarpas tarp blokų */
+  }
+
+  .balance {
+    margin-top: 20px; /* papildomas tarpas viršuje */
+  }
+
+  .cards {
+    grid-template-columns: 1fr; /* kiekviena kortelė po viena */
+    gap: 20px; /* mažesnis tarpas tarp kortelių */
+    margin-top: 40px;
+  }
+}
+
 .card {
   background: rgba(255, 255, 255, 0.05);
   padding: 25px;
@@ -157,9 +176,97 @@ body {
 
 /* accounts */
 
+/* Pridėti scroll virš lentelės mobiliesiems */
+@media (max-width: 768px) {
+  .container-accounts table {
+    display: block;
+  }
+
+  th,
+  td {
+    white-space: nowrap; /* neleisti suskirstyti tekstui */
+  }
+}
+
 .container-accounts {
   max-width: 1100px;
   margin: auto;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none; /* paslėpti antraštę */
+  }
+
+  tbody tr {
+    margin-bottom: 20px;
+    background: #111827;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  td {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 120px; /* vieta etiketėms */
+  }
+
+  td::before {
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    width: 100px;
+    font-weight: 600;
+    white-space: nowrap;
+    content: attr(data-label); /* automatiškai prideda etiketę */
+    color: #94a3b8;
+  }
+}
+
+/* Mobile responsive table */
+@media (max-width: 768px) {
+  .container-accounts table,
+  .container-accounts thead,
+  .container-accounts tbody,
+  .container-accounts th,
+  .container-accounts td,
+  .container-accounts tr {
+    display: block;
+  }
+
+  .container-accounts thead tr {
+    display: none; /* paslėpti stulpelių antraštes */
+  }
+
+  .container-accounts td {
+    position: relative;
+    padding-left: 50%;
+    margin-bottom: 15px;
+    text-align: left;
+    border-bottom: 1px solid #1f2937;
+  }
+
+  .container-accounts td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #94a3b8;
+    white-space: nowrap;
+  }
 }
 
 div.counting {
@@ -298,11 +405,11 @@ input.balance {
 
 /* specialus stilius readonly laukams create.php */
 .input-create[readonly].balance {
-  background: #374151;       /* tamsesnis fonas nei įvedami laukai */
-  color: #9ca3af;            /* pilkas tekstas, rodo, kad neaktyvus */
-  font-weight: 600;          /* kiek paryškintas tekstas */
-  cursor: not-allowed;       /* rodo, kad negalima keisti */
-  opacity: 0.8;              /* švelnus užpildymas */
+  background: #374151; /* tamsesnis fonas nei įvedami laukai */
+  color: #9ca3af; /* pilkas tekstas, rodo, kad neaktyvus */
+  font-weight: 600; /* kiek paryškintas tekstas */
+  cursor: not-allowed; /* rodo, kad negalima keisti */
+  opacity: 0.8; /* švelnus užpildymas */
   border: 1px solid #4b5563; /* subtilus kontūras, kad atskirtų lauką */
 }
 
@@ -542,7 +649,6 @@ input.balance {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-
 }
 .modal-content {
   background: #1f2937;
@@ -569,4 +675,21 @@ input.balance {
 }
 .btn-delete-modal:hover {
   opacity: 0.9;
+}
+
+/* MOBILE: mygtukai vienu stulpeliu */
+@media (max-width: 768px) {
+
+  .list-actions .links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .list-actions .links a,
+  .list-actions .delete {
+    width: 100%;
+    text-align: center;
+  }
+
 }

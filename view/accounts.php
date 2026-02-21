@@ -44,13 +44,13 @@
             <tbody>
                 <?php foreach ($clients as $client) : ?>
                     <tr id="client-<?= $client['id'] ?>">
-                        <td><?= $client['firstName'] ?></td>
-                        <td><?= $client['lastName'] ?></td>
-                        <td><?= $client['accountNumber'] ?></td>
-                        <td><?= $client['personalId'] ?></td>
-                        <td><?= $client['balance'] ?> Eur</td>
+                        <td data-label="First Name"><?= $client['firstName'] ?></td>
+                        <td data-label="Last Name"><?= $client['lastName'] ?></td>
+                        <td data-label="Account Number"><?= $client['accountNumber'] ?></td>
+                        <td data-label="Personal ID"><?= $client['personalId'] ?></td>
+                        <td data-label="Balance"><?= $client['balance'] ?> Eur</td>
                         </td>
-                        <td class="list-actions" style="position: relative;">
+                        <td data-label="Action" class="list-actions" style="position: relative;">
                             <div class="links">
                                 <a href="<?= URL ?>credit/<?= $client['id'] ?>" class="add">Credit</a>
                                 <a href="<?= URL ?>debit/<?= $client['id'] ?>" class="withdraw">Debit</a>
