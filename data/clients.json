@@ -28,7 +28,7 @@
         "lastName": "Balandis",
         "accountNumber": "LT1240100123123412341234",
         "personalId": "35505151234",
-        "balance": "50000.00",
+        "balance": "42000.00",
         "id": 836897958
     },
     {
@@ -70,14 +70,6 @@
         "personalId": "36203310187",
         "balance": "1000.00",
         "id": "69986e2e8cbb3"
-    },
-    {
-        "firstName": "Zenonas",
-        "lastName": "Palaima",
-        "accountNumber": "LT604010012301230123",
-        "personalId": "37412310129",
-        "balance": "0.00",
-        "id": "69986f26d988d"
     },
     {
         "firstName": "Leonas",
@@ -126,5 +118,13 @@
         "personalId": "60909030127",
         "balance": "10000.00",
         "id": "699983ef4dbde"
+    },
+    {
+        "firstName": "Zenonas",
+        "lastName": "Palaima",
+        "accountNumber": "LT787777741874958915",
+        "personalId": "37508050124",
+        "balance": "0.00",
+        "id": "699c0306e83ed"
     }
 ]
