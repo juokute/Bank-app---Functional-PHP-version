@@ -28,7 +28,7 @@
         "lastName": "Balandis",
         "accountNumber": "LT1240100123123412341234",
         "personalId": "35505151234",
-        "balance": "42000.00",
+        "balance": "40000.00",
         "id": 836897958
     },
     {
@@ -78,14 +78,6 @@
         "personalId": "37208130129",
         "balance": "0.00",
         "id": "6998707ecbcf2"
-    },
-    {
-        "firstName": "Robertas",
-        "lastName": "Buzas",
-        "accountNumber": "LT517777724474287802",
-        "personalId": "39201140127",
-        "balance": "0.00",
-        "id": "699885865d612"
     },
     {
         "firstName": "Ana",
